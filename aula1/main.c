@@ -23,15 +23,15 @@ int main(int argc, char *argv[])
 	list = lst_new();
 
 	/* insert several elements into list */
-	insert_new_account(list, 1, 100);
+	insert_new_account(list, 1, 100,"jose");
 	sleep(1);
-	insert_new_account(list, 2, 200);
+	insert_new_account(list, 2, 200,"ola");
 	sleep(2);
-	insert_new_account(list, 3, 300);
+	insert_new_account(list, 3, 300,"ehhe");
 	sleep(2);
-	insert_new_account(list, 0, 400);
+	insert_new_account(list, 0, 400,"no");
 	sleep(1);
-	insert_new_account(list, 5, 500);
+	insert_new_account(list, 5, 500,"asada");
 
 	/* print list 'list' */
 	lst_print(list);

@@ -8,13 +8,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
+#include <string.h>
 
 /* lst_iitem - each element of the list points to the next element */
 typedef struct lst_item {
 	struct lst_item *next;
 	int accountid;
 	int balance;
+	char *owner;
 } lst_item_t;
 
 /* list_t */
@@ -31,7 +32,7 @@ void lst_destroy(list_t *list);
 
 /* insert_new_account - insert into 'list' a new account with given 'accountid'
  * and 'balance' */
-void insert_new_account(list_t *list, int accountid, int balance);
+void insert_new_account(list_t *list, int accountid, int balance, char* owner);
 
 /* update_account_balance - updates the 'balance' for a given 'accountid' in
  * 'list' */
