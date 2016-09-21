@@ -64,9 +64,9 @@ void delete_accounts_by_owner(list_t *list, const char *owner)
 	for(lst_item_t *prev=list->first,*cur=list->first->next;cur->next!=NULL;prev=cur,cur=cur->next){
 		if (strcmp(cur->owner,owner)==0){
 			prev->next=cur->next;
-			lst_item_t * old=cur;
-			free(old->owner);
-			free(old);
+			free(cur->owner);
+			free(cur);
+			cur=prev;
 		}
 	}
 }
